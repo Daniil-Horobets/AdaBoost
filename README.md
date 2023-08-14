@@ -40,12 +40,23 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
   - The bagged classifier _M<sup>*</sup>_ counts the votes and assigns the class with the most votes to X.
 - **Boosting algorithm can be extended for numeric prediction.**
 
-## Algorithm AdaBoost.M1
+## AdaBoost.M1 Algorithm<br/>(From the original paper By Yoav Freund, Robert E Schapire)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/Algorithm-dark.png">
-  <img alt="Algorithm-light img" src="assets/Algorithm-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/Algorithm-dark.png" width="615" height="695">
+  <img alt="Algorithm-light img" src="assets/Algorithm-light.png" width="615" height="695">
 </picture>
+
+## Simplified interpretation
+### Training:
+- Given a data set _D_ of _d_ class-labeled tuples: (x<sub>1</sub>, y<sub>1</sub>), ... ,(x<sub>d</sub>, y<sub>d</sub>) 
+with y<sub>d</sub> ∈ Y = {1, ... ,c}.
+- Initialize empty lists to hold information per classifier: w, β, M ← empty list.
+- Initialize weights for first classifier to hold same probability for each tuple: w<sub>j</sub><sup>1</sup> ← 1/d
+- Generate _K_ classifiers in _K_ iterations. At iteration k,
+  1. Calculate “normalized” weights: p<sup>k</sup> = $\dfrac{x}{y}$
+
+
 
 ## Dataset
 dataset = pd.read_csv("dataset/car_train.csv") <br/>
