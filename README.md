@@ -1,5 +1,9 @@
 # AdaBoost ("Adaptive Boosting")
 
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
 ## Description
 
 AdaBoost, short for Adaptive Boosting, is a statistical classification meta-algorithm formulated by Yoav Freund and 
@@ -55,7 +59,10 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
 - Initialize weights for first classifier to hold same probability for each tuple: w<sub>j</sub><sup>1</sup> ← 1/d
 - Generate _K_ classifiers in _K_ iterations. At iteration k,
   1. Calculate “normalized” weights: **p**<sup>k</sup> = $\dfrac{**w**<sup>k</sup>}{\Sigma_{j=1}^d w<sub>j</sub><sup>i</sup>}}$
-  1. Calculate “normalized” weights: **p**<sup>k</sup> = $\Huge$\frac{w}{\Sigma_{j=1}^d wji}$$
+  1. Calculate “normalized” weights: **p**<sup>k</sup> =
+  \[ 
+  \Huge\sum_{j=1}^d p_j^k \cdot \text{err}()
+  \]
   2. Sample dataset with replacement according to **p**<sup>k</sup> to form training set _D<sub>k</sub>_.
   3. Derive classification model _M<sub>k</sub>_ from _D<sub>k</sub>_.
   4. Calculate error _ε<sub>k</sub>_ by using _D<sub>k</sub>_ as a test set as follows: _ε<sub>k</sub>_ = $\sum_{j=1}^d p_j^k \cdot \text{err}(_M_k, x_j, y_j_)$,
