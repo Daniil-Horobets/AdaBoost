@@ -45,7 +45,7 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="Algorithm-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="Algorithm-light.png">
+  <img alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="Algorithm-light.png">
 </picture>
 
 
