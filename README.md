@@ -40,8 +40,8 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
   - The bagged classifier _M<sup>*</sup>_ counts the votes and assigns the class with the most votes to X.
 - **Boosting algorithm can be extended for numeric prediction.**
 
-
 ## Algorithm AdaBoost.M1
+
 <div class="image-container">
   <img src="Algorithm-light.png" alt="Algorithm Image" class="image-light">
   <img src="Algorithm-dark.png" alt="Algorithm Image" class="image-dark">
@@ -67,6 +67,7 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
     }
   }
 </style>
+
 
 ## AdaBoost License
 AdaBoost license:
