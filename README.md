@@ -48,15 +48,14 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
 </picture>
 
 ## AdaBoost License
-AdaBoost license:
 
-Yoav Freund, Robert E Schapire,
-A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting,
-Journal of Computer and System Sciences,
-Volume 55, Issue 1,
-1997,
-Pages 119-139,
-ISSN 0022-0000,
-https://doi.org/10.1006/jcss.1997.1504.
-(https://www.sciencedirect.com/science/article/pii/S002200009791504X)
-Abstract: In the first part of the paper we consider the problem of dynamically apportioning resources among a set of options in a worst-case on-line framework. The model we study can be interpreted as a broad, abstract extension of the well-studied on-line prediction model to a general decision-theoretic setting. We show that the multiplicative weight-update Littlestone–Warmuth rule can be adapted to this model, yielding bounds that are slightly weaker in some cases, but applicable to a considerably more general class of learning problems. We show how the resulting learning algorithm can be applied to a variety of problems, including gambling, multiple-outcome prediction, repeated games, and prediction of points in Rn. In the second part of the paper we apply the multiplicative weight-update technique to derive a new boosting algorithm. This boosting algorithm does not require any prior knowledge about the performance of the weak learning algorithm. We also study generalizations of the new boosting algorithm to the problem of learning functions whose range, rather than being binary, is an arbitrary finite set or a bounded segment of the real line.
+Yoav Freund, Robert E Schapire, <br/>
+A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting, <br/>
+Journal of Computer and System Sciences, <br/>
+Volume 55, Issue 1, <br/>
+1997, <br/>
+Pages 119-139, <br/>
+ISSN 0022-0000, <br/>
+https://doi.org/10.1006/jcss.1997.1504. <br/>
+(https://www.sciencedirect.com/science/article/pii/S002200009791504X)<br/>
+Abstract: In the first part of the paper we consider the problem of dynamically apportioning resources among a set of options in a worst-case on-line framework. The model we study can be interpreted as a broad, abstract extension of the well-studied on-line prediction model to a general decision-theoretic setting. We show that the multiplicative weight-update Littlestone–Warmuth rule can be adapted to this model, yielding bounds that are slightly weaker in some cases, but applicable to a considerably more general class of learning problems. We show how the resulting learning algorithm can be applied to a variety of problems, including gambling, multiple-outcome prediction, repeated games, and prediction of points in Rn. In the second part of the paper we apply the multiplicative weight-update technique to derive a new boosting algorithm. This boosting algorithm does not require any prior knowledge about the performance of the weak learning algorithm. We also study generalizations of the new boosting algorithm to the problem of learning functions whose range, rather than being binary, is an arbitrary finite set or a bounded segment of the real line. <br/>
