@@ -51,10 +51,14 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
 ### Training:
 - Given a data set _D_ of _d_ class-labeled tuples: (x<sub>1</sub>, y<sub>1</sub>), ... ,(x<sub>d</sub>, y<sub>d</sub>) 
 with y<sub>d</sub> ∈ Y = {1, ... ,c}.
-- Initialize empty lists to hold information per classifier: w, β, M ← empty list.
+- Initialize empty lists to hold information per classifier: **w**, β, **M** ← empty list.
 - Initialize weights for first classifier to hold same probability for each tuple: w<sub>j</sub><sup>1</sup> ← 1/d
 - Generate _K_ classifiers in _K_ iterations. At iteration k,
-  1. Calculate “normalized” weights: p<sup>k</sup> = $\dfrac{x}{y}$
+  1. Calculate “normalized” weights: **p**<sup>k</sup> = $\dfrac{**w**<sup>k</sup>}{\Sigma_{j=1}^d w<sub>j</sub><sup>i</sup>}}$
+  2. Sample dataset with replacement according to **p**<sup>k</sup> to form training set _D<sub>k</sub>_.
+  3. Derive classification model _M<sub>k</sub>_ from _D<sub>k</sub>_.
+  4. Calculate error _ε<sub>k</sub>_ by using _D<sub>k</sub>_ as a test set as follows: _ε<sub>k</sub>_ = $\sum_{j=1}^d p_j^k \cdot \text{err}(_M_k, x_j, y_j_)$,
+  where the misclassification error err(_M<sub>k</sub>, x<sub>j</sub>, y<sub>j</sub>_) returns 1 if _M<sub>k</sub>(x<sub>j</sub>) ≠ y<sub>j</sub>_, otherwise it returns 0.
 
 
 
