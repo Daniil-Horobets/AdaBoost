@@ -42,31 +42,58 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
 
 ## Algorithm AdaBoost.M1
 
-<div class="image-container">
-  <img src="Algorithm-light.png" alt="Algorithm Image" class="image-light">
-  <img src="Algorithm-dark.png" alt="Algorithm Image" class="image-dark">
-</div>
 
-<style>
-  .image-container {
-    display: inline-block;
-    position: relative;
-  }
-  
-  .image-dark {
-    display: none;
-  }
-  
-  @media (prefers-color-scheme: dark) {
-    .image-light {
-      display: none;
-    }
-    
-    .image-dark {
-      display: inline-block;
-    }
-  }
-</style>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="Algorithm-dark.png">
+  <img alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="Algorithm-light.png">
+</picture>
+
+
+[//]: # (<div class="image-container">)
+
+[//]: # (  <img src="Algorithm-light.png" alt="Algorithm Image" class="image-light">)
+
+[//]: # (  <img src="Algorithm-dark.png" alt="Algorithm Image" class="image-dark">)
+
+[//]: # (</div>)
+
+[//]: # ()
+[//]: # (<style>)
+
+[//]: # (  .image-container {)
+
+[//]: # (    display: inline-block;)
+
+[//]: # (    position: relative;)
+
+[//]: # (  })
+
+[//]: # (  )
+[//]: # (  .image-dark {)
+
+[//]: # (    display: none;)
+
+[//]: # (  })
+
+[//]: # (  )
+[//]: # (  @media &#40;prefers-color-scheme: dark&#41; {)
+
+[//]: # (    .image-light {)
+
+[//]: # (      display: none;)
+
+[//]: # (    })
+
+[//]: # (    )
+[//]: # (    .image-dark {)
+
+[//]: # (      display: inline-block;)
+
+[//]: # (    })
+
+[//]: # (  })
+
+[//]: # (</style>)
 
 
 ## AdaBoost License
