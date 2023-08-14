@@ -57,7 +57,7 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
   1. Calculate “normalized” weights: $\Huge \textbf{p}^k = \frac{\textbf{w}^k}{Σ_{j=1}^d w_j^i}$
   2. Sample dataset with replacement according to **p**<sup>k</sup> to form training set _D<sub>k</sub>_.
   3. Derive classification model _M<sub>k</sub>_ from _D<sub>k</sub>_.
-  4. Calculate error _ε<sub>k</sub>_ by using _D<sub>k</sub>_ as a test set as follows: _ε<sub>k</sub>_ = $\sum_{j=1}^d p_j^k \cdot \text{err}(_M_k, x_j, y_j_)$,
+  4. Calculate error _ε<sub>k</sub>_ by using _D<sub>k</sub>_ as a test set as follows: $\Huge ε^k = \sum_{j=1}^d p_j^k \cdot \text{err}(M_k, x_j, y_j)$,
   where the misclassification error err(_M<sub>k</sub>, x<sub>j</sub>, y<sub>j</sub>_) returns 1 if _M<sub>k</sub>(x<sub>j</sub>) ≠ y<sub>j</sub>_, otherwise it returns 0.
 
 
