@@ -43,9 +43,19 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
 ## Algorithm AdaBoost.M1
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="Algorithm-dark.png">
-  <img alt="Algorithm-light img" src="Algorithm-light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/Algorithm-dark.png">
+  <img alt="Algorithm-light img" src="assets/Algorithm-light.png">
 </picture>
+
+## Dataset
+dataset = pd.read_csv("dataset/car_train.csv") <br/>
+dataset.head() <br/>
+<br/>
+<img src="assets/Dataset.png" alt="Image" width="391" height="146"> <br/>
+
+This dataset is a slightly modified version of the [car evaluation dataset](https://archive.ics.uci.edu/ml/datasets/Car+Evaluation) 
+from the UCI Machine Learning Repository. Originally, this dataset has four class values. For the sake of this example 
+dataset modified to binary classification.<br/>
 
 ## AdaBoost License
 
