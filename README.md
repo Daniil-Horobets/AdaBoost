@@ -55,13 +55,17 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
 - Initialize weights for first classifier to hold same probability for each tuple: w<sub>j</sub><sup>1</sup> ← $\LARGE \frac{1}{d}$
 - Generate _K_ classifiers in _K_ iterations. At iteration k,  
   1. Calculate “normalized” weights:
-      <div style="text-align: center;">$\LARGE \textbf{p}^k = \frac{\textbf{w}^k}{Σ_{j=1}^d w_j^i}$</div>
+     <div style="text-align: center;">$\LARGE \textbf{p}^k = \frac{\textbf{w}^k}{Σ_{j=1}^d w_j^i}$</div>
   2. Sample dataset with replacement according to **p**<sup>k</sup> to form training set _D<sub>k</sub>_.  
   3. Derive classification model _M<sub>k</sub>_ from _D<sub>k</sub>_.  
-  4. Calculate error _ε<sub>k</sub>_ by using _D<sub>k</sub>_ as a test set as follows: <center>$\LARGE ε_k = Σ_{j=1}^d p_j^k \cdot \text{err}(M_k, x_j, y_j)$,</center> where the misclassification error $\text{err}(M_k, x_j, y_j)$ returns 1 if _M<sub>k</sub>(x<sub>j</sub>) $\neq$ y<sub>j</sub>_, otherwise it returns 0.  
+  4. Calculate error _ε<sub>k</sub>_ by using _D<sub>k</sub>_ as a test set as follows: 
+     <div style="text-align: center;">$\LARGE ε_k = Σ_{j=1}^d p_j^k \cdot \text{err}(M_k, x_j, y_j)$,</div> where the misclassification error $\text{err}(M_k, x_j, y_j)$ returns 1 if _M<sub>k</sub>(x<sub>j</sub>) $\neq$ y<sub>j</sub>_, otherwise it returns 0.  
   5. If $\text{error}(M_k)$ > 0.5: Abandon this classifier and go back to step 1.  
-  6. Calculate <center>$\LARGE \textbf{β}_k = \frac{ε_k}{1 - ε_k}$.</center>
-  7. Update weights for the next iteration: <center>$\LARGE  w_j^{k+1} = w_j^kβ_k^{1−\text{err}(M_k, x_j, y_j)}$.</center>If a tuple is misclassified, its weight remains the same, otherwise it is decreased. Misclassified tuple weights are increased  relatively.  
+  6. Calculate 
+     <div style="text-align: center;">$\LARGE \textbf{β}_k = \frac{ε_k}{1 - ε_k}$.</div>
+  7. Update weights for the next iteration: 
+     <div style="text-align: center;">$\LARGE  w_j^{k+1} = w_j^kβ_k^{1−\text{err}(M_k, x_j, y_j)}$.</div>
+     If a tuple is misclassified, its weight remains the same, otherwise it is decreased. Misclassified tuple weights are increased  relatively.  
   8. Add w<sup>k+1</sup> , _M<sub>k</sub>_ , and _β<sub>k</sub>_ to their respective lists.  
 
 
