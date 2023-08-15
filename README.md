@@ -54,7 +54,8 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
 - Initialize empty lists to hold information per classifier: **w**, **β**, **M** ← empty list.  
 - Initialize weights for first classifier to hold same probability for each tuple: w<sub>j</sub><sup>1</sup> ← $\LARGE \frac{1}{d}$
 - Generate _K_ classifiers in _K_ iterations. At iteration k,  
-  1. Calculate “normalized” weights: <center>$\LARGE \textbf{p}^k = \frac{\textbf{w}^k}{Σ_{j=1}^d w_j^i}$</center>
+  1. Calculate “normalized” weights:
+      <div style="text-align: center;">$\LARGE \textbf{p}^k = \frac{\textbf{w}^k}{Σ_{j=1}^d w_j^i}$</div>
   2. Sample dataset with replacement according to **p**<sup>k</sup> to form training set _D<sub>k</sub>_.  
   3. Derive classification model _M<sub>k</sub>_ from _D<sub>k</sub>_.  
   4. Calculate error _ε<sub>k</sub>_ by using _D<sub>k</sub>_ as a test set as follows: <center>$\LARGE ε_k = Σ_{j=1}^d p_j^k \cdot \text{err}(M_k, x_j, y_j)$,</center> where the misclassification error $\text{err}(M_k, x_j, y_j)$ returns 1 if _M<sub>k</sub>(x<sub>j</sub>) $\neq$ y<sub>j</sub>_, otherwise it returns 0.  
