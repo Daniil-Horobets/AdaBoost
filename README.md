@@ -78,7 +78,7 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
   3. Add _w<sub>i</sub>_ to weight for class _c_.
 - **Return predicted class with the largest weight.**
 - Mathematically, this can be formulated as:
-     <div style="text-align: center;">$\LARGE  M(x) = \argmax_{y∈Y} Σ_{i=1}^k (\log (\frac{1}{β_i}))M_i(x)$.</div>
+     <div style="text-align: center;">$\LARGE  M(x) = \text{argmax}_{y∈Y} Σ_{i=1}^k (\log (\frac{1}{β_i}))M_i(x)$.</div>
 
 
 
