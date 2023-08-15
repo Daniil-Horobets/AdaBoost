@@ -54,18 +54,18 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
 - Initialize empty lists to hold information per classifier: **w**, β, **M** ← empty list.
 - Initialize weights for first classifier to hold same probability for each tuple: w<sub>j</sub><sup>1</sup> ← 1/d
 - Generate _K_ classifiers in _K_ iterations. At iteration k,
-  a) Calculate “normalized” weights: $\Huge \textbf{p}^k = \frac{\textbf{w}^k}{Σ_{j=1}^d w_j^i}$
-  b) Sample dataset with replacement according to **p**<sup>k</sup> to form training set _D<sub>k</sub>_.
-  c) Derive classification model _M<sub>k</sub>_ from _D<sub>k</sub>_.
-  d) Calculate error _ε<sub>k</sub>_ by using _D<sub>k</sub>_ as a test set as follows: 
+  1. Calculate “normalized” weights: $\Huge \textbf{p}^k = \frac{\textbf{w}^k}{Σ_{j=1}^d w_j^i}$
+  2. Sample dataset with replacement according to **p**<sup>k</sup> to form training set _D<sub>k</sub>_.
+  3. Derive classification model _M<sub>k</sub>_ from _D<sub>k</sub>_.
+  4. Calculate error _ε<sub>k</sub>_ by using _D<sub>k</sub>_ as a test set as follows: 
   $\Huge ε_k = Σ_{j=1}^d p_j^k \cdot \text{err}(M_k, x_j, y_j)$, where the misclassification error 
   $\text{err}(M_k, x_j, y_j)$ returns 1 if _M<sub>k</sub>(x<sub>j</sub>) ≠ y<sub>j</sub>_, otherwise it returns 0.
-  e) If $\text{error}(M_k)$ > 0.5: Abandon this classifier and go back to step 1.
-  f) Calculate $\Huge \textbf{β}_k = \frac{ε_k}{1 - ε_k}$.
-  g) Update weights for the next iteration: $\Huge w_j^{k+1} = w_j^kβ_k^{1−\text{err}(M_k, x_j, y_j)}$. If a tuple is 
+  5. If $\text{error}(M_k)$ > 0.5: Abandon this classifier and go back to step 1.
+  6. Calculate $\Huge \textbf{β}_k = \frac{ε_k}{1 - ε_k}$.
+  7. Update weights for the next iteration: $\Huge w_j^{k+1} = w_j^kβ_k^{1−\text{err}(M_k, x_j, y_j)}$. If a tuple is 
   misclassified, its weight remains the same, otherwise it is decreased. Misclassified tuple weights are increased 
   relatively.
-  h) Add w<sup>k+1</sup> , _M<sub>k</sub>_ , and _β<sub>k</sub>_ to their respective lists.
+  8. Add w<sup>k+1</sup> , _M<sub>k</sub>_ , and _β<sub>k</sub>_ to their respective lists.
 
 
 
