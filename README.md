@@ -1,6 +1,6 @@
 # AdaBoost ("Adaptive Boosting")
 
-## Description
+## AdaBoost Description
 
 AdaBoost, short for Adaptive Boosting, is a statistical classification meta-algorithm formulated by Yoav Freund and 
 Robert Schapire in 1995, who won the 2003 Gödel Prize for their work. It can be used in conjunction with many other 
@@ -20,7 +20,7 @@ Every learning algorithm tends to suit some problem types better than others, an
 parameters and configurations to adjust before it achieves optimal performance on a dataset. AdaBoost (with decision 
 trees as the weak learners) is often referred to as the best out-of-the-box classifier. When used with decision tree 
 learning, information gathered at each stage of the AdaBoost algorithm about the relative 'hardness' of each training 
-sample is fed into the tree growing algorithm, such that later trees tend to focus on harder-to-classify examples. 
+sample is fed into the tree growing algorithm, such that later trees tend to focus on harder-to-classify examples. <br/>
 (Wikipedia: [AdaBoost](https://en.wikipedia.org/wiki/AdaBoost))
 
 ## Boosting
@@ -40,14 +40,14 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
   - The bagged classifier _M<sup>*</sup>_ counts the votes and assigns the class with the most votes to X.
 - **Boosting algorithm can be extended for numeric prediction.**
 
-## AdaBoost.M1 Algorithm<br/>(From the original paper By Yoav Freund, Robert E Schapire)
+## AdaBoost.M1 Algorithm<br/>(From the original paper By Yoav Freund, Robert E Schapire<sup>1</sup>)
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/Algorithm-dark.png" width="615" height="695">
   <img alt="Algorithm-light img" src="assets/Algorithm-light.png" width="615" height="695">
 </picture>
 
-## Simplified interpretation
+## Simplified Step by Step Interpretation
 ### Training:
 - Given a data set _D_ of _d_ class-labeled tuples: (x<sub>1</sub>, y<sub>1</sub>), ... ,(x<sub>d</sub>, y<sub>d</sub>)   
 with y<sub>d</sub> ∈ Y = {1, ... ,c}.  
@@ -69,6 +69,18 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
      If a tuple is misclassified, its weight remains the same, otherwise it is decreased. Misclassified tuple weights are increased  relatively.  
   8. Add **w**<sup>k+1</sup> , _M<sub>k</sub>_ , and _β<sub>k</sub>_ to their respective lists.  
 
+### Prediction:
+- **Initialize weight of each class to zero.**
+- **For each classifier** _i_ **in** _k_ **classifiers:**
+  1. Calculate the weight of this classifier’s vote:
+     <div style="text-align: center;">$\LARGE  w_i = \log (\frac{1}{β_i})$.</div>
+  2. Get class prediction _c_ for (single) tuple _x_ from current weak classifier $M_i: \quad c = M_i(x)$.
+  3. Add _w<sub>i</sub>_ to weight for class _c_.
+- **Return predicted class with the largest weight.**
+- Mathematically, this can be formulated as:
+     <div style="text-align: center;">$\LARGE  M(x) = \argmax_{y∈Y} Σ_{i=1}^k (\log (\frac{1}{β_i}))M_i(x)$.</div>
+
+
 
 
 ## Dataset
@@ -81,7 +93,7 @@ This dataset is a slightly modified version of the [car evaluation dataset](http
 from the UCI Machine Learning Repository. Originally, this dataset has four class values. For the sake of this example 
 dataset modified to binary classification.<br/>
 
-## AdaBoost License
+## <sup>1</sup>AdaBoost License
 
 Yoav Freund, Robert E Schapire, <br/>
 A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting, <br/>
