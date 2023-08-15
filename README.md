@@ -61,13 +61,14 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
   where the misclassification error $\text{err}(M_k, x_j, y_j)$ returns 1 if _M<sub>k</sub>(x<sub>j</sub>) ≠ y<sub>j</sub>_, otherwise it returns 0.
   5. If $\text{error}(M_k)$ > 0.5: Abandon this classifier and go back to step 1.
   6. Calculate $\Huge \textbf{β}_k = \frac{ε_k}{1 - ε_k}$.
-  7. 
+  7. Update weights for the next iteration: $w_j^{k+1} = w_j^kβ_k^{1−\text{err}(M_k, x_j, y_j)}$
+
 
 
 
 ## Dataset
-dataset = pd.read_csv("dataset/car_train.csv") <br/>
-dataset.head() <br/>
+    dataset = pd.read_csv("dataset/car_train.csv")
+    dataset.head()
 <br/>
 <img src="assets/Dataset.png" alt="Image" width="391" height="146"> <br/>
 
