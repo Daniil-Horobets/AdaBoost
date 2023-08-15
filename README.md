@@ -93,8 +93,8 @@ This dataset is a slightly modified version of the [car evaluation dataset](http
 from the UCI Machine Learning Repository. Originally, this dataset has four class values. For the sake of this example 
 dataset modified to binary classification.<br/>
 
-## <sup>1</sup>AdaBoost License
-
+## Bibliography
+### <sup>1</sup>AdaBoost License
 Yoav Freund, Robert E Schapire, <br/>
 A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting, <br/>
 Journal of Computer and System Sciences, <br/>
@@ -105,3 +105,6 @@ ISSN 0022-0000, <br/>
 https://doi.org/10.1006/jcss.1997.1504. <br/>
 (https://www.sciencedirect.com/science/article/pii/S002200009791504X)<br/>
 Abstract: In the first part of the paper we consider the problem of dynamically apportioning resources among a set of options in a worst-case on-line framework. The model we study can be interpreted as a broad, abstract extension of the well-studied on-line prediction model to a general decision-theoretic setting. We show that the multiplicative weight-update Littlestone–Warmuth rule can be adapted to this model, yielding bounds that are slightly weaker in some cases, but applicable to a considerably more general class of learning problems. We show how the resulting learning algorithm can be applied to a variety of problems, including gambling, multiple-outcome prediction, repeated games, and prediction of points in Rn. In the second part of the paper we apply the multiplicative weight-update technique to derive a new boosting algorithm. This boosting algorithm does not require any prior knowledge about the performance of the weak learning algorithm. We also study generalizations of the new boosting algorithm to the problem of learning functions whose range, rather than being binary, is an arbitrary finite set or a bounded segment of the real line. <br/>
+
+### References
+Code and Theory constitutes a component of the "Knowledge Discovery in Databases" course exercise offered by Friedrich-Alexander-Universität Erlangen-Nürnberg
