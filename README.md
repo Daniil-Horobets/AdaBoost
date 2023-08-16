@@ -41,7 +41,8 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
 - **Boosting algorithm can be extended for numeric prediction.**
 
 ## AdaBoost.M1 Algorithm<br/>_(From the original paper By Yoav Freund, Robert E Schapire<sup>1</sup>)_
-_reload page if color scheme don't match you theme_
+_reload page if the color scheme doesn't match your theme_
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/Algorithm-dark.png" width="615" height="695">
   <img alt="Algorithm-light img" src="assets/Algorithm-light.png" width="615" height="695">
@@ -69,7 +70,7 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
      If a tuple is misclassified, its weight remains the same, otherwise it is decreased. Misclassified tuple weights are increased  relatively.  
   8. Add **w**<sup>k+1</sup> , _M<sub>k</sub>_ , and _β<sub>k</sub>_ to their respective lists.
 
-_See implementation of Training part in `fit` function. You can [view it in adaboost.py](adaboost.py)_
+_See the implementation of the Training part in the `fit` function. You can [view it in adaboost.py](adaboost.py)_
 
 
 ### Prediction:
@@ -83,7 +84,7 @@ _See implementation of Training part in `fit` function. You can [view it in adab
 - Mathematically, this can be formulated as:
      <div style="text-align: center;">$\LARGE  M(x) = \text{argmax}_{y∈Y} Σ_{i=1}^k (\log (\frac{1}{β_i}))M_i(x)$.</div>
 
-_See implementation of Prediction part in `predict` function. You can [view it in adaboost.py](adaboost.py)_
+_See the implementation of the Prediction part in the `predict` function. You can [view it in adaboost.py](adaboost.py)_
 
 
 
@@ -106,7 +107,7 @@ dataset modified to binary classification.<br/>
 | Recall                     | 0.75  |
 | Specificity                | 0.94  |
 | Area Under the Curve (AUC) | 0.85  |
-| F1 scor                    | 0.80  |
+| F1 score                   | 0.80  |
 
 <br/>
 
