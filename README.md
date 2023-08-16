@@ -40,14 +40,14 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
   - The bagged classifier _M<sup>*</sup>_ counts the votes and assigns the class with the most votes to X.
 - **Boosting algorithm can be extended for numeric prediction.**
 
-## AdaBoost.M1 Algorithm<br/>(From the original paper By Yoav Freund, Robert E Schapire<sup>1</sup>)
-
+## AdaBoost.M1 Algorithm<br/>_(From the original paper By Yoav Freund, Robert E Schapire<sup>1</sup>)_
+_reload page if color scheme don't match you theme_
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/Algorithm-dark.png" width="615" height="695">
   <img alt="Algorithm-light img" src="assets/Algorithm-light.png" width="615" height="695">
 </picture>
 
-## Simplified Step by Step Interpretation
+## Simplified Step by Step Interpretation of Algorithm
 ### Training:
 - Given a data set _D_ of _d_ class-labeled tuples: (x<sub>1</sub>, y<sub>1</sub>), ... ,(x<sub>d</sub>, y<sub>d</sub>)   
 with y<sub>d</sub> ∈ Y = {1, ... ,c}.  
@@ -67,7 +67,10 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
   7. Update weights for the next iteration: 
      <div style="text-align: center;">$\LARGE  w_j^{k+1} = w_j^kβ_k^{1−\text{err}(M_k, x_j, y_j)}$.</div>
      If a tuple is misclassified, its weight remains the same, otherwise it is decreased. Misclassified tuple weights are increased  relatively.  
-  8. Add **w**<sup>k+1</sup> , _M<sub>k</sub>_ , and _β<sub>k</sub>_ to their respective lists.  
+  8. Add **w**<sup>k+1</sup> , _M<sub>k</sub>_ , and _β<sub>k</sub>_ to their respective lists.
+
+_See implementation of Training part in `fit` function. You can [view it in adaboost.py](adaboost.py)_
+
 
 ### Prediction:
 - **Initialize weight of each class to zero.**
@@ -79,6 +82,8 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
 - **Return predicted class with the largest weight.**
 - Mathematically, this can be formulated as:
      <div style="text-align: center;">$\LARGE  M(x) = \text{argmax}_{y∈Y} Σ_{i=1}^k (\log (\frac{1}{β_i}))M_i(x)$.</div>
+
+_See implementation of Prediction part in `predict` function. You can [view it in adaboost.py](adaboost.py)_
 
 
 
@@ -92,6 +97,29 @@ with y<sub>d</sub> ∈ Y = {1, ... ,c}.
 This dataset is a slightly modified version of the [car evaluation dataset](https://archive.ics.uci.edu/ml/datasets/Car+Evaluation) 
 from the UCI Machine Learning Repository. Originally, this dataset has four class values. For the sake of this example 
 dataset modified to binary classification.<br/>
+
+## Output Metrics
+
+| Metric                     | Value |
+|----------------------------|-------|
+| Accuracy                   | 0.89  |
+| Recall                     | 0.75  |
+| Specificity                | 0.94  |
+| Area Under the Curve (AUC) | 0.85  |
+| F1 scor                    | 0.80  |
+
+<br/>
+
+Confusion Matrix: <br/>
+
+<img src="assets/confusion_matrix.png" alt="Image" width="384" height="288"> <br/>
+
+Receiver Operating Characteristic (ROC) curve: <br/>
+
+<img src="assets/roc_curve.png" alt="Image" width="384" height="288"> <br/>
+
+_Values may differ in each run_ <br/>
+_See implementation and more metrics calculation in [main.py](main.py)_
 
 ## Bibliography
 ### <sup>1</sup>AdaBoost License
