@@ -1,27 +1,10 @@
 # AdaBoost ("Adaptive Boosting")
 
-## AdaBoost Description
+## Description
 
-AdaBoost, short for Adaptive Boosting, is a statistical classification meta-algorithm formulated by Yoav Freund and 
-Robert Schapire in 1995, who won the 2003 Gödel Prize for their work. It can be used in conjunction with many other 
-types of learning algorithms to improve performance. The output of the other learning algorithms ('weak learners') is 
-combined into a weighted sum that represents the final output of the boosted classifier. Usually, AdaBoost is presented 
-for binary classification, although it can be generalized to multiple classes or bounded intervals on the real line.
-
-AdaBoost is adaptive in the sense that subsequent weak learners are tweaked in favor of those instances misclassified 
-by previous classifiers. In some problems, it can be less susceptible to the overfitting problem than other learning 
-algorithms. The individual learners can be weak, but as long as the performance of each one is slightly better than 
-random guessing, the final model can be proven to converge to a strong learner.
-
-Although AdaBoost is typically used to combine weak base learners (such as decision stumps), it has been shown that it 
-can also effectively combine strong base learners (such as deep decision trees), producing an even more accurate model.
-
-Every learning algorithm tends to suit some problem types better than others, and typically has many different 
-parameters and configurations to adjust before it achieves optimal performance on a dataset. AdaBoost (with decision 
-trees as the weak learners) is often referred to as the best out-of-the-box classifier. When used with decision tree 
-learning, information gathered at each stage of the AdaBoost algorithm about the relative 'hardness' of each training 
-sample is fed into the tree growing algorithm, such that later trees tend to focus on harder-to-classify examples. <br/>
-(Wikipedia: [AdaBoost](https://en.wikipedia.org/wiki/AdaBoost))
+The goal of the algorithm is to find a final hypothesis with low error relative to a given distribution over the 
+training examples.  <br/>
+_from the original paper By Yoav Freund, Robert E Schapire_<sup> 1</sup>
 
 ## Boosting
 
@@ -40,7 +23,7 @@ sample is fed into the tree growing algorithm, such that later trees tend to foc
   - The bagged classifier _M<sup>*</sup>_ counts the votes and assigns the class with the most votes to X.
 - **Boosting algorithm can be extended for numeric prediction.**
 
-## AdaBoost.M1 Algorithm<br/>_(From the original paper By Yoav Freund, Robert E Schapire<sup>1</sup>)_
+## AdaBoost.M1 Algorithm<br/><small>_from the original paper By Yoav Freund, Robert E Schapire_<sup> 1</sup></small>
 _reload page if the color scheme doesn't match your theme_
 
 <picture>
@@ -123,7 +106,7 @@ _Values may differ in each run_ <br/>
 _See implementation and more metrics calculation in [main.py](main.py)_
 
 ## Bibliography
-### <sup>1</sup>AdaBoost License
+### <sup>1 </sup>AdaBoost License
 Yoav Freund, Robert E Schapire, <br/>
 A Decision-Theoretic Generalization of On-Line Learning and an Application to Boosting, <br/>
 Journal of Computer and System Sciences, <br/>
