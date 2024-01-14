@@ -33,7 +33,7 @@ training examples.  <br/>
   <img alt="Algorithm-light img" src="assets/Algorithm-light.png" width="615" height="695">
 </picture>
 
-## Simplified Step by Step Interpretation of Algorithm
+## Simplified Step by Step Interpretation
 
 ### Training:
 
